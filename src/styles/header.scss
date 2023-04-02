@@ -1,0 +1,11 @@
+@import 'config.scss';
+@import 'utils.scss';
+
+.header {
+  background-color: $primary-color;
+  color: white;
+  p {
+    padding: 10px 0;
+    text-align: center;
+  }
+}
