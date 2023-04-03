@@ -3,9 +3,9 @@
 
 .header {
   @include display-between();
-
   background-color: $primary-color;
   color: white;
+  position: relative;
 
   .title {
     padding: 10px 0;
@@ -17,5 +17,19 @@
     @include display-between();
     width: 70px;
     padding-right: 20px;
+
+    .bell {
+      position: relative;
+      cursor: pointer;
+      span {
+        position: absolute;
+        right: 0;
+
+        background-color: red;
+        padding: 2px;
+        border-radius: 50%;
+        font-size: size(0.8);
+      }
+    }
   }
 }

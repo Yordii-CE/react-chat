@@ -4,17 +4,37 @@
   width: 20%;
   border-left: 1px solid rgb(165, 165, 165);
   padding: 10px;
+  position: relative;
+  .exit {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+
+    i {
+      cursor: pointer;
+    }
+    p {
+      margin-left: 5px;
+    }
+  }
 }
-.members,
-.admins {
-  margin-top: 20px;
+.container-members,
+.container-admins {
+  margin-top: 15px;
+
   .title {
     @include display-between();
     background-color: white;
     padding: 8px;
     margin-bottom: 10px;
     font-size: size(1.8);
+
+    i {
+      cursor: pointer;
+    }
   }
+
   .member,
   .admin {
     display: flex;
@@ -44,6 +64,8 @@
       border: 1px solid $primary-color;
       border-radius: 5%;
       font-size: size(1.5);
+      width: 100%;
+      box-sizing: border-box;
     }
   }
 }

@@ -30,6 +30,11 @@ export default function Bar() {
     <div className="bar">
       <Members data={members} />
       <Admins data={admins} />
+
+      <div className="exit">
+        <i className="fa-sharp fa-solid fa-circle-xmark"></i>
+        <p>Abandonar chat</p>
+      </div>
     </div>
   )
 }

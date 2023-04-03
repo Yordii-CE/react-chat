@@ -4,6 +4,7 @@
   @include display-Y();
   justify-content: space-between;
   flex-grow: 1;
+  padding: 0px 20px;
 
   .contact-name {
     margin-top: 20px;
@@ -16,19 +17,56 @@
 
   .sms-history {
     flex-grow: 1;
+    .other {
+      display: flex;
+      align-items: center;
+
+      p {
+        background-color: $primary-color;
+        color: white;
+        width: max-content;
+        padding: 5px;
+        border-radius: 8px;
+        margin-left: 8px;
+      }
+    }
+
+    .me {
+      display: flex;
+      flex-direction: column;
+      align-items: end;
+      text-align: right;
+
+      p {
+        background-color: $primary-color;
+        color: white;
+        width: max-content;
+        padding: 5px;
+        border-radius: 8px;
+        margin-left: 8px;
+        margin-bottom: 10px;
+      }
+    }
   }
   .send-sms {
-    margin-left: 20px;
+    margin-bottom: 20px;
+    display: flex;
     input {
-      width: 80%;
+      width: 100%;
       padding: 10px;
       border: 1px solid $primary-color;
       border-radius: 5%;
       font-size: size(1.5);
     }
-    i {
+    div {
+      background-color: red;
+      width: 30px;
       background-color: $primary-color;
-      color: white;
+      @include display-center();
+      i {
+        color: white;
+        cursor: pointer;
+      }
     }
   }
 }

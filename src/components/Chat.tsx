@@ -1,5 +1,28 @@
+import { useRef, useState } from 'react'
 import '../styles/chat.scss'
 export default function Chat() {
+  const $input = useRef<HTMLInputElement>(null)
+  const [messages, setMessages] = useState([
+    {
+      text: 'Hi!',
+    },
+  ])
+
+  const handleClick = () => {
+    let text = $input.current?.value
+    if (text == '') return
+
+    setMessages([
+      ...messages,
+      {
+        text,
+      },
+    ])
+
+    $input.current.value = ''
+    $input.current?.focus()
+  }
+
   return (
     <div className="chat">
       <div className="contact-name">
@@ -8,18 +31,21 @@ export default function Chat() {
       </div>
 
       <div className="sms-history">
-        <div className="sms">
-          <div className="other">
-            <p>Hi!! </p>
-          </div>
-          <div className="me">
-            <p>Hi!!</p>
-          </div>
+        <div className="other">
+          <i className="fa-solid fa-circle-user"></i>
+          <p>Hi!!</p>
+        </div>
+        <div className="me">
+          {messages.map((el) => (
+            <p>{el.text}</p>
+          ))}
         </div>
       </div>
       <div className="send-sms">
-        <input type="text" placeholder="Écrivez un message..." />
-        <i className="fa-sharp fa-solid fa-paper-plane"></i>
+        <input ref={$input} type="text" placeholder="Écrivez un message..." />
+        <div onClick={handleClick}>
+          <i className="fa-sharp fa-solid fa-paper-plane"></i>
+        </div>
       </div>
     </div>
   )

@@ -10,12 +10,20 @@
     padding: 15px 15px;
     &:hover {
       background: rgb(182, 215, 230);
+      cursor: pointer;
     }
-    > p {
-      font-size: size(1.8);
+    .contact-name {
+      @include display-between();
+      p {
+        font-size: size(1.8);
+      }
+      i {
+        color: $primary-color;
+        font-size: size(1);
+      }
     }
 
-    div {
+    div:nth-child(2) {
       @include display-between();
       font-size: size(1.5);
       color: gray;

@@ -23,7 +23,10 @@ export default function MessageList() {
     <div className="messages">
       {messages.map((el) => (
         <div className="message">
-          <p>{el.name}</p>
+          <div className="contact-name">
+            <p>{el.name}</p>
+            <i className="fa-solid fa-circle"></i>
+          </div>
           <div>
             <span>{el.message}</span>
             <span>{el.date}</span>
