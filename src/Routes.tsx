@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import LoginView from './Views/LoginView'
-import MessagesView from './Views/MessagesView'
+import MessengerView from './Views/MessengerView'
 
 const MyRoutes = () => {
   return (
@@ -8,7 +8,7 @@ const MyRoutes = () => {
       <Routes>
         <Route index element={<LoginView />}></Route>
         <Route path="/login" element={<LoginView />}></Route>
-        <Route path="/messages" element={<MessagesView />}></Route>
+        <Route path="/messenger" element={<MessengerView />}></Route>
         {/*  <Route path="/main" element={<MainView />}>
             <Route index element={<DashboardView />}></Route>
             <Route path="dash" element={<DashboardView />}></Route>

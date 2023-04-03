@@ -1,0 +1,49 @@
+@import '../styles/config';
+@import '../styles/utils';
+.bar {
+  width: 20%;
+  border-left: 1px solid rgb(165, 165, 165);
+  padding: 10px;
+}
+.members,
+.admins {
+  margin-top: 20px;
+  .title {
+    @include display-between();
+    background-color: white;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-size: size(1.8);
+  }
+  .member,
+  .admin {
+    display: flex;
+    align-items: center;
+    margin: 5px 0px;
+
+    i {
+      @include display-center();
+      width: 30px;
+      height: 30px;
+      background-color: rgb(0, 82, 18);
+      border-radius: 50%;
+      color: white;
+      font-size: size(1.5);
+    }
+
+    p {
+      margin-left: 5px;
+      font-size: size(1.5);
+    }
+  }
+
+  .search {
+    input {
+      margin-top: 10px;
+      padding: 5px;
+      border: 1px solid $primary-color;
+      border-radius: 5%;
+      font-size: size(1.5);
+    }
+  }
+}

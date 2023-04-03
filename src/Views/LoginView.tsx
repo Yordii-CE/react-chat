@@ -9,7 +9,7 @@ export default function LoginView() {
         <form>
           <input type="text" placeholder="Num d'utilisateur" />
           <input type="text" placeholder="Mot de passe" />
-          <Link to={'messages'}>COMMENCER</Link>
+          <Link to={'messenger'}>COMMENCER</Link>
         </form>
       </div>
     </div>

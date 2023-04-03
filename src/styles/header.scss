@@ -2,10 +2,20 @@
 @import 'utils.scss';
 
 .header {
+  @include display-between();
+
   background-color: $primary-color;
   color: white;
-  p {
+
+  .title {
     padding: 10px 0;
     text-align: center;
+    margin: auto;
+  }
+
+  .logout {
+    @include display-between();
+    width: 70px;
+    padding-right: 20px;
   }
 }

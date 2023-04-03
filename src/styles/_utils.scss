@@ -26,3 +26,17 @@ button {
   display: flex;
   flex-direction: column;
 }
+
+@mixin display-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin display-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@function size($size) {
+  @return $unit * $size;
+}
