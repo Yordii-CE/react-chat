@@ -10,7 +10,7 @@ export default function Chat() {
 
   const handleClick = () => {
     let text = $input.current?.value
-    if (text == '') return
+    if (!text) return
 
     setMessages([
       ...messages,
@@ -19,6 +19,7 @@ export default function Chat() {
       },
     ])
 
+    if($input.current == null) return
     $input.current.value = ''
     $input.current?.focus()
   }

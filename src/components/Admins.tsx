@@ -10,9 +10,11 @@ export default function Admins({ data }: Prop) {
   const $admins = useRef<HTMLDivElement>(null)
 
   const handleClick = () => {
-    if ($admins?.current?.style.display == 'block') {
+    if($admins.current == null) return
+    if ($admins.current.style.display == 'block') {
       $admins.current.style.display = 'none'
     } else {
+      
       $admins.current.style.display = 'block'
     }
   }

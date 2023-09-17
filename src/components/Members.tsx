@@ -10,7 +10,9 @@ export default function Members({ data }: Prop) {
   const $members = useRef<HTMLDivElement>(null)
 
   const handleClick = () => {
-    if ($members?.current?.style.display == 'block') {
+    if($members.current == null) return
+
+    if ($members.current?.style.display == 'block') {
       $members.current.style.display = 'none'
     } else {
       $members.current.style.display = 'block'
